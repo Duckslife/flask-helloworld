@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    {% if title %}
+    <title>{{ title }} - micorduck </title>
+    {% else %}
+    <title>Welcome to micorduck </title>
+    {% endif %}
+
+  </head>
+  <body>
+    <div class="">
+        micorduck:<a href="/index">home</a>
+    </div>
+      <hr>
+    {% block content %}
+    {% endblock%}
+  </body>
+</html>

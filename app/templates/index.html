@@ -1,17 +1,12 @@
-<html>
-	<head>
-		{% if title %}
-		<title>{{ title }} - Microduck</title>
-		{% else %}
-		<title>Welcome to Microduck</title>
-		{% endif %}
-	</head>
-	<body>
-		<h1>Hello, {{ user.username }}</h1>
-		{% for post in posts %}
-		<div>
+{% extends "base.html" %}
+
+{% block content %}
+	<h1> Hi , {{user.username}}</h1>
+	{% for post in posts%}
+	<div class="">
 		<p>{{ post.author.username }} says: <b>{{ post.body }}</b></p>
-		</div>
-		{% endfor %}
-	</body>
-</html>
+	</div>
+	{% endfor %}
+
+
+{% endblock %}
